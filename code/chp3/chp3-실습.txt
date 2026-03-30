@@ -1,0 +1,50 @@
+-- 2126086 김희곤
+-- 과제1. 온라인 쇼핑몰
+
+-- 과제2. 요구사항 작성
+
+/*
+[회원 관리]
+- 사용자는 회원가입을 통해 이름, 연락처, 주소 정보를 등록할 수 있다. 
+- 회원은 일반 고객과 관리자로 구분된다. 
+
+[상품 관리]
+- 판매되는 상품은 상품명, 가격, 재고 수량 정보를 확인할 수 있어야 한다. 
+- 상품은 고유한 식별 번호로 구분, 관리된다. 
+
+[주문]
+- 회원은 여러 개의 상품을 주문할 수 있다. 
+- 주문 시 주문 날짜와 배송지 정보가 저장되어야 한다. 
+- 주문 내역이 조회 가능하여야 한다. 
+
+*/
+
+-- 과제3. 데이터 설계
+/*
+[Entities]
+- 회원 (Users)
+- 상품 (Products)
+- 주문 (Orders)
+
+[Users]
+- id (BIGSERIAL, PK)
+- name (VARCHAR(50))
+- phone_number (VARCHAR(15))
+- email (VARCHAR(100))
+- address (TEXT)
+- created_at (DATE)
+
+[Products]
+- id (BIGSERIAL, PK)
+- product_name (VARCHAR(100))
+- price (INTEGER)
+- stock_quantity (INTEGER)
+- category (VARCHAR(50))
+
+[Orders]
+- id (BIGSERIAL, PK)
+- user_id (BIGINT, FK)
+- order_date (TIMESTAMP)
+- total_amount (INTEGER)
+- status (VARCHAR(20))
+*/
